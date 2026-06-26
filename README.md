@@ -1,3 +1,30 @@
+ authorization-app-practice
+
+## 概要
+COACHTECH 教材 Tutorial 10-3「認可機能 ハンズオン演習」で作成した成果物です。
+ログインユーザーの投稿だけ編集・削除のボタンが表示されるようになっています。
+
+## 使用技術
+- PHP 8.2
+- Laravel 10.0
+- Policy / Gate（認可）
+- Laravel Fortify（認証）
+
+
+## 学んだこと
+- 認証（誰か）と認可（何ができるか）の違いと使い分け
+- Policy クラスで認可に関するロジックを定義する
+- Blade の @can ディレクティブとコントローラの $this->authorize()
+
+## 動作確認
+ ユーザーAでログインし、ユーザーAの投稿に「編集」「削除」ボタンが表示される
+ ユーザーAでログイン時、ユーザーBの投稿には「編集」「削除」ボタンが表示されない
+ ユーザーAでログイン時、ユーザーBの投稿を直接編集（/posts/3/edit）しようとすると403エラー
+ ユーザーBでログインし、同様の動作を確認
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
